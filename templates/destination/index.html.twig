@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% import "macro/input.html.twig" as forms %}
+
+{% block title %}Hello DestinationController!{% endblock %}
+
+{% block sidebar %}
+    {{ parent() }}
+    {% set destinations = ['cuba', 'dubai', 'londres'] %}
+
+    <ul>
+        {% for dest in destinations %}
+            <li>
+                <a href="{{ path('destination_detail', {'lieu':dest}) }}">{{ dest }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+    <a href="{{ path('test-twig') }}">Home Page Twig <i class="fa fa-home"></i> </a>
+
+    <h1>Mes destinations</h1>
+
+    <img src="{{ asset('images/voyage.jpg') }}">
+
+    {% set destinations = ['cuba', 'dubai', 'londres'] %}
+
+    <ul>
+        {% for dest in destinations %}
+        <li>
+            <a href="{{ path('destination_detail', {'lieu':dest}) }}">{{ dest }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p>{{ forms.input('username') }}</p>
+    <p>{{ forms.input('password', null, 'password') }}</p>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'C:/Users/HB/agenceVoyage/src/Controller/DestinationController.php'|file_link(0) }}">src/Controller/DestinationController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'C:/Users/HB/agenceVoyage/templates/destination/index.html.twig'|file_link(0) }}">templates/destination/index.html.twig</a></code></li>
+    </ul>
+</div>
+{% endblock %}

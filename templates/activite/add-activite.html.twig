@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AddActiviteController!{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Hello! ✅</h1>
+
+{#        <h2>Felicitations{{ activite.name }} ajouté avec succés</h2>#}
+
+        {{ form_start(form) }}
+
+        {{ form_label(form.name) }}
+        {{ form_widget(form.name) }}
+        {{ form_errors(form.name) }}
+        {{ form_row(form.image) }}
+
+        {{ form_end(form) }}
+
+        This friendly message is coming from:
+
+    </div>
+{% endblock %}

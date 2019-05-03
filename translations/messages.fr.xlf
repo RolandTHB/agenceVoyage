@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="JljuNjr" resname="add an activity">
+        <source>add an activity</source>
+        <target>Ajouter une activité</target>
+      </trans-unit>
+      <trans-unit id="hzpVWHp" resname="add_an_activity">
+        <source>add_an_activity</source>
+        <target>ajouter une activité</target>
+      </trans-unit>
+      <trans-unit id="q4M42m8" resname="hello there is a virus on your computer">
+        <source>hello there is a virus on your computer</source>
+        <target>bonjour il y a un virus sur votre ordinateur</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
